@@ -16,7 +16,12 @@ use App\Http\Controllers\public\MainController;
 |
 */
 
+// Rotta index accessibile a tutti
 Route::get('/', [MainController::class, 'index'])->name('index');
+
+// Rotta per vedere dati
+Route::get('/profile/show/{id}', [MainController::class, 'show'])->name('show');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
