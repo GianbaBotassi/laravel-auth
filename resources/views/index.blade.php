@@ -6,8 +6,8 @@
             <div class="mt-4">
                 <ul class="p-0">
                     @foreach ($projects as $project)
-                        <li class="list-unstyled py-1 px-3 my-2 rounded bg-primary">
-                            <a class="text-decoration-none text-white" href="">
+                        <li class="list-unstyled my-4">
+                            <a class="text-decoration-none py-1 px-3 text-white rounded bg-primary" href="">
                                 {{ ucfirst($project->name) }}
                             </a>
                         </li>
