@@ -20,7 +20,9 @@ use App\Http\Controllers\public\MainController;
 Route::get('/', [MainController::class, 'index'])->name('index');
 
 // Rotta per vedere dati
-Route::get('/profile/show/{id}', [MainController::class, 'show'])->name('show');
+Route::get('/profile/show/{id}', [MainController::class, 'show'])
+    ->middleware(['auth'])
+    ->name('show');
 
 
 Route::get('/dashboard', function () {
