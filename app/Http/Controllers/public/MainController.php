@@ -16,11 +16,4 @@ class MainController extends Controller
 
         return view('public.index', compact('projects'));
     }
-    public function show($id)
-    {
-
-        $projects = Project::findOrFail($id);
-
-        return view('profile.show', compact('projects'));
-    }
 }

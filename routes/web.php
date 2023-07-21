@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\public\MainController;
+use App\Http\Controllers\LoggedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\public\MainController;
 Route::get('/', [MainController::class, 'index'])->name('index');
 
 // Rotta per vedere dati
-Route::get('/profile/show/{id}', [MainController::class, 'show'])
+Route::get('/profile/show/{id}', [LoggedController::class, 'show'])
     ->middleware(['auth'])
     ->name('show');
 
